@@ -1,0 +1,22 @@
+Dependências
+
+PELO APT
+    default-jdk
+    openjdk-8-jdk
+    python3-hunspell
+    libhunspell-dev
+    unoconv
+    xserver-xephyr
+
+PELO PIP3
+    pyqt5
+    pyqtwebengine
+    pyahocorasick
+    natsort 
+    Cython
+    vlibras-translate 
+    pdfminer.six
+    Pillow
+    unidecode
+
+java 1.8

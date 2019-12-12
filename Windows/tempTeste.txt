@@ -1,0 +1,67 @@
+Indução eletromagnética é o fenômeno relacionado ao aparecimento de uma corrente elétrica em  um condutor imerso em um campo magnético, quando ocorre variação do fluxo que o atravessa. 
+
+Em 1820, Hans Christian Oersted descobriu que a passagem de uma corrente elétrica em um  condutor mudava a direção da agulha de uma bússola. Ou seja, ele descobriu o eletromagnetismo. 
+
+A partir daí, muitos cientistas começaram a investigar mais profundamente a conexão entre os  fenômenos elétricos e magnéticos. 
+
+Eles buscavam, principalmente, descobrir se o efeito contrário era possível, isto é, se os efeitos  magnéticos poderiam gerar uma corrente elétrica. 
+
+Assim, em 1831, Michael Faraday com base em resultados experimentais, descobriu o fenômeno da indução eletromagnética. 
+
+A Lei de Faraday e a Lei de Lenz são duas leis fundamentais do eletromagnetismo e determinam a  indução eletromagnética. 
+
+Experiências de Faraday Faraday realizou inúmeras experiência a fim de entender melhor os fenômenos eletromagnéticos. 
+
+Em uma delas, utilizou um anel feito de ferro e enrolou um fio de cobre em uma metade do anel e  outro fio de cobre na outra metade. 
+
+Ligou as extremidades do primeiro enrolamento com uma bateria e o segundo enrolamento  conectou a um outro pedaço de fio de forma que passasse por uma bússola colocada a uma certa  distância do anel. 
+
+No momento da ligação da bateria, identificou que a bússola variava sua direção, voltando a  observar o mesmo quando desligava a ligação. Contudo, quando a corrente permanecia constante  não havia movimento na bússola. 
+
+Assim, ele constatou que uma corrente elétrica induzia uma corrente em um outro condutor.  Contudo, ainda faltava identificar se o mesmo ocorria utilizando ímãs permanentes. 
+
+Ao fazer um experimento movimentando um ímã cilíndrico dentro de uma bobina, ele pôde  identificar o movimento da agulha de um galvanômetro ligado à bobina. 
+
+Desta forma, ele pôde concluir que o movimento de um ímã gera uma corrente elétrica em um  condutor, ou seja a indução eletromagnética estava descoberta. 
+
+Lei de Faraday A partir dos resultados encontrados, Faraday formulou uma lei para explicar o fenômeno da indução eletromagnética. Essa lei ficou conhecida como Lei de Faraday. 
+
+Esta lei enuncia que quando houver variação do fluxo magnético através de um circuito, surgirá  nele uma força eletromotriz induzida. 
+
+Lei de Lenz Apesar de identificar que a corrente induzida variava de sentido, Faraday não conseguiu determinar  como ocorria essa variação. 
+
+Então em 1834, o físico russo Heinrich Lenz, propôs uma regra para a definição do sentido da  corrente induzida. 
+
+A Lei de Lenz enuncia que o sentido da corrente induzida é tal que o campo que ela produz se  opõem à variação do fluxo magnético que a produziu. 
+
+Essa lei é representada na fórmula da força eletromotriz induzida através do sinal de menos. 
+
+Aplicações da Indução Eletromagnética Geradores de corrente alternada Uma das mais importantes aplicações da indução eletromagnética é na geração de energia elétrica.  Com essa descoberta passou a ser possível a geração deste tipo de energia em larga escala. 
+
+Essa geração pode ocorrer em instalações complexas, como é o caso das usinas de energia elétrica,  até as mais simples como nos dínamos de bicicletas. 
+
+Existem diversos tipos de usinas de energia elétrica, mas basicamente o funcionamento de todas  utiliza o mesmo princípio. Nessas usinas, a produção de energia elétrica ocorre através da energia  mecânica de rotação de um eixo. 
+
+Nas usinas hidrelétricas, por exemplo, a água é represada em grandes barragens. O desnível  provocado por esse represamento faz com que a água se movimente. 
+
+Esse movimento é necessário para girar as pás da turbina que é ligada ao eixo do gerador de  eletricidade. A corrente produzida é alternada, ou seja, seu sentido é variável. 
+
+Transformadores A energia elétrica após ser produzida nas usinas é transportada para os centros consumidores através de sistemas de transmissão. 
+
+Contudo, antes de ser transportada para grandes distâncias, os dispositivos, chamados de  transformadores, elevam a tensão para reduzir as perdas de energia. 
+
+Quando essa energia chega até o seu destino final, novamente ocorrerá a mudança no valor da  tensão. 
+
+Assim, um transformador é um dispositivo que serve para modificar uma tensão alternada, ou seja,  aumenta ou diminui o seu valor de acordo com a necessidade. 
+
+Basicamente um transformador é constituído por um núcleo de material ferromagnético no qual são  enroladas duas bobinas independentes (enrolamento de fios). 
+
+A bobina conectada a fonte é chamada de primário, pois recebe a tensão que será transformada. A  outra é chamada de secundário. 
+
+Como a corrente que chega no primário é alternada, origina um fluxo magnético também alternado  no núcleo do transformador. Essa variação do fluxo, gera uma corrente alternada induzida no  secundário. 
+
+O aumento ou a diminuição da tensão induzida, depende da relação entre o número de espiras  (voltas do fio) nas duas bobinas (primário e secundário). 
+
+Se o número de espiras no secundário for maior que no primário o transformador irá elevar a tensão  e sendo ao contrário, ele irá abaixar a tensão. 
+
+ 

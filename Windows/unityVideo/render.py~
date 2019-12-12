@@ -1,0 +1,25 @@
+#! /usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import sys
+import os
+import subprocess
+from pyvirtualdisplay import Display
+
+# [Dependencies]
+# 1. # sudo apt-get install python-pip
+# 2. # sudo apt-get install xvfb linuxvnc xserver-xephyr
+# 3. # pip install pyvirtualdisplay
+# Execução do player ./videoCreator.x86_64 'userID' 'legenda 1(ativa) 0(desativa)' 'fps'
+
+display = Display(visible=1, size=(1280, 720))
+display.start()
+
+try:
+    subprocess.call(["./videoCreator.x86_64", str(sys.argv[1]), "0", "30", "32", "37", "-screen-fullscreen", "1", "-screen-quality", "Fantastic", "-force-opengl"], shell=True)
+except OSError as e:
+    print e.errno
+    print e.filename
+    print e.strerror
+
+display.stop()

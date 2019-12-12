@@ -1,0 +1,32 @@
+Instalar na VM Linux:
+	
+	PELO APT:
+		xserver-xephyr
+		libxrandr-dev
+		ffmpeg
+		python3-pip
+		openjdk-8-jdk
+		python3-hunspell
+
+		libhunspell-dev
+		unoconv
+
+	PELO PIP
+		Cython
+		vlibras-translate 
+
+Instalar no Windows
+	Python3
+	Xming
+
+	pelo pip3:
+		pyqt5
+
+		pyqtwebengine
+
+		pyahocorasick
+		pywin32
+		Pillow
+		
+		pdfminer.six
+		unidecode

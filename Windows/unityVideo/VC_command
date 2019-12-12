@@ -1,0 +1,1 @@
+./videoCreator.x86_64 teste_renderer 1 30 32 37 -screen-fullscreen 0 -screen-quality Fantastic -force-opengl
