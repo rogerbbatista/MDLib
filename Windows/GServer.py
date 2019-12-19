@@ -50,8 +50,8 @@ class GServer():
 	
 		# Espera inicialização do Xephyr e
 		# extrai o winId da janela do display virtual
-		winId = -1
-		while winId == -1:
+		self.winId = -1
+		while self.winId == -1:
 			sleep(1)
 			if tries == 10:
 				raise Exception("Servidor Xephyr não encontrado!")
@@ -62,18 +62,18 @@ class GServer():
 					hh.append(h)
 				return True
 
-			hwnds = []
-			win32gui.EnumWindows(callbackDEF, hwnds)
+			self.hwnds = []
+			win32gui.EnumWindows(callbackDEF, self.hwnds)
 
 
-			for win in hwnds:
+			for win in self.hwnds:
 				if win32gui.GetWindowText(win) == self.title:
-					winId = int(win)
+					self.winId = int(win)
 					break
                         
-		self.new_window = QtGui.QWindow.fromWinId(winId)
+		self.new_window = QtGui.QWindow.fromWinId(self.winId)
 		
-		print("winId = " + str(winId))
+		print("winId = " + str(self.winId))
 	
 		# FramelessWindow permite "colar" a janela do servidor na janela do editor
 		self.new_window.setFlags(Qt.FramelessWindowHint)
