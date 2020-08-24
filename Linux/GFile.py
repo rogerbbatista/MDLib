@@ -25,7 +25,7 @@ from GSettings import GDefaultValues
 ############################################
 
 class documentSenderObject(QtCore.QObject):
-	formattedReady  = QtCore.pyqtSignal()
+	formattedReady  = QtCore.pyqtSignal(str)
 	convertionReady = QtCore.pyqtSignal(str)
 
 class GDocument(QtWebEngineWidgets.QWebEngineView):
@@ -85,7 +85,7 @@ class GDocument(QtWebEngineWidgets.QWebEngineView):
 		super().load(QtCore.QUrl.fromUserInput(self.__pdfjs + "?file="+url+self.file))
 		threading.Thread(target=self.getFormattedText).start()
 		
-	def onFormattedReady(self):
+	def onFormattedReady(self, txt):
 		self.ready = True
 		print ("REFINO!")
 	
@@ -143,7 +143,7 @@ class GDocument(QtWebEngineWidgets.QWebEngineView):
 	# Refino
 	def getFormattedText(self):
 		if self.formattedText is not None:
-			#self.sender.formattedReady.emit()
+			self.sender.formattedReady.emit(self.formattedText)
 			return self.formattedText
 			
 		os.system("rm media/images/*")
@@ -170,7 +170,7 @@ class GDocument(QtWebEngineWidgets.QWebEngineView):
 				refino = refino[:count] + refino[count+2:]
 
 		self.formattedText = refino
-		self.sender.formattedReady.emit()
+		self.sender.formattedReady.emit(self.formattedText)
 		return self.formattedText
 
 #############################################

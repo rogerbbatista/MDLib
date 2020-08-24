@@ -414,7 +414,7 @@ class Main(QtWidgets.QMainWindow):
 		return 0
 
 	
-	def onPDFTextReady(self):
+	def onPDFTextReady(self, txt):
 		self.images_widget.scanForImages(GDefaultValues.imgDir)
 		self.images_widget.loadImages()
 		box = QtWidgets.QMessageBox()
@@ -429,7 +429,7 @@ class Main(QtWidgets.QMainWindow):
 		reply = box.exec_()
 #		reply = QtWidgets.QMessageBox.question(self, "Abrir documento", "Traduzir documento?", QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.No)
 		if reply == QtWidgets.QMessageBox.Yes:
-			self.getTranslationFromFile()
+			self.translation.update(txt)
 
 	#################################
 	#
@@ -477,7 +477,8 @@ class Main(QtWidgets.QMainWindow):
 		return True
 	
 	def getTranslationFromFile(self):
-		if not self.pdf_widget.hasFile() and self.openDocument() == 1:
+		if not self.pdf_widget.hasFile():
+			self.openDocument()
 			return
 			
 		if self.hasOpenTranslation:
@@ -493,11 +494,8 @@ class Main(QtWidgets.QMainWindow):
 			reply = box.exec_()
 			if reply == QtWidgets.QMessageBox.No:
 				return 
-		
-		txt = self.pdf_widget.getFormattedText()
-		self.translation.update(txt)
 
-	
+		self.pdf_widget.getFormattedText()
 	def importTextFile(self):
 		filename = QtWidgets.QFileDialog().getOpenFileName(caption="Abrir arquivo de tradução", filter="EGL (*.egl)")
 		if filename[0] == "":
