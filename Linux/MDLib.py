@@ -692,25 +692,27 @@ class Main(QtWidgets.QMainWindow):
 	#
 	##################################
 	
+	def linkImages(self, text):
+		matches = re.findall(r"(__img)([0-9])_([0-9]+)", text)			
+		mentions = {"__img0_" : [], "__img1_" : [], "__img2_" : [], "__img3_" : []}
+		for match in matches:
+			mentions[match[0]+match[1] + "_"].append(match[2])
+		
+		for key in mentions:
+			i = int(re.search(r'\d+', key).group())
+			for index in mentions[key]:
+				text = text.replace(key + index, ("<img%d=" % i) + "file://" + self.images_widget.getImageButtonFromIndex(int(index)).getImagePath())
+			i += 1
+				
+		for i in range(0, 4):
+			text = text.replace("_img%d__" % i, "<\\img%d>" % i)
+		
+		return text
+	
 	def sendText(self):
 		cursor = self.text.textCursor()
 		if cursor.hasSelection():
-			text = cursor.selection().toPlainText()
-
-			matches = re.findall(r"(__img)([0-9])_([0-9]+)", text)			
-			mentions = {"__img0_" : [], "__img1_" : [], "__img2_" : [], "__img3_" : []}
-			for match in matches:
-				mentions[match[0]+match[1] + "_"].append(match[2])
-			
-			for key in mentions:
-				i = int(re.search(r'\d+', key).group())
-				for index in mentions[key]:
-					text = text.replace(key + index, ("<img%d=" % i) + "file://" + self.images_widget.getImageButtonFromIndex(int(index)).getImagePath())
-				i += 1
-				
-			for i in range(0, 4):
-				text = text.replace("_img%d__" % i, "<\\img%d>" % i)
-				
+			text = self.linkImages(cursor.selection().toPlainText())
 			self.server.send(text)
 		else:
 			text = self.text.toPlainText()
@@ -742,7 +744,7 @@ class Main(QtWidgets.QMainWindow):
 		subprocess.run(cmd, shell=True)
 		cursor = self.text.textCursor()
 		if cursor.hasSelection():
-			txt = cursor.selection().toPlainText()
+			txt = self.linkImages(cursor.selection().toPlainText())
 			if not txt.isspace():
 				txt = "__rec " + txt + " __stop"
 				self.server.sendToRecord(txt, vName)
