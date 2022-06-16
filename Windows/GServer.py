@@ -23,6 +23,7 @@ class GServer():
 		self.game = None
 		self.title = "GXEPHYRSV"
 		self.process = QProcess()
+		self.vScreenProcess = QProcess()
 		self.sender = senderObject()
 
 		from random import randint
@@ -42,7 +43,7 @@ class GServer():
 			return self.serverWidget
 
 		print("Iniciando Xephyr!")
-		system("\"C:\\Program Files (x86)\\Xming\\Xming.exe\" :0 -clipboard -multiwindow")
+		self.vScreenProcess.start("\"C:\\Program Files (x86)\\Xming\\Xming.exe\" :0 -clipboard -multiwindow")
 		sleep(1)
 		self.process.start("ubuntu1804 -c DISPLAY=:0 Xephyr -ac -br -resizeable -no-host-grab -reset -terminate -screen 640x480 " + self.display + " -title " + self.title)
 		tries = 0
